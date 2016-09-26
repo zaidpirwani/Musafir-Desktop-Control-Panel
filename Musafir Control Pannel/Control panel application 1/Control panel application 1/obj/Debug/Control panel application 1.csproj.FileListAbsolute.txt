@@ -1,0 +1,9 @@
+F:\IMR\musafir gui\Musafir Control Pannel\Control panel application 1\Control panel application 1\bin\Debug\Control panel application 1.exe.config
+F:\IMR\musafir gui\Musafir Control Pannel\Control panel application 1\Control panel application 1\bin\Debug\Control panel application 1.exe
+F:\IMR\musafir gui\Musafir Control Pannel\Control panel application 1\Control panel application 1\bin\Debug\Control panel application 1.pdb
+F:\IMR\musafir gui\Musafir Control Pannel\Control panel application 1\Control panel application 1\obj\Debug\Control panel application 1.csprojResolveAssemblyReference.cache
+F:\IMR\musafir gui\Musafir Control Pannel\Control panel application 1\Control panel application 1\obj\Debug\Control_panel_application_1.Form1.resources
+F:\IMR\musafir gui\Musafir Control Pannel\Control panel application 1\Control panel application 1\obj\Debug\Control_panel_application_1.Properties.Resources.resources
+F:\IMR\musafir gui\Musafir Control Pannel\Control panel application 1\Control panel application 1\obj\Debug\Control panel application 1.csproj.GenerateResource.Cache
+F:\IMR\musafir gui\Musafir Control Pannel\Control panel application 1\Control panel application 1\obj\Debug\Control panel application 1.exe
+F:\IMR\musafir gui\Musafir Control Pannel\Control panel application 1\Control panel application 1\obj\Debug\Control panel application 1.pdb
