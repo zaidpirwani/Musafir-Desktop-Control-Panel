@@ -39,16 +39,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.button11 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
@@ -68,7 +67,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button12 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -99,7 +97,6 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.button13 = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.button14 = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
@@ -227,7 +224,6 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.label5);
@@ -249,16 +245,6 @@
             this.label11.Size = new System.Drawing.Size(68, 17);
             this.label11.TabIndex = 7;
             this.label11.Text = "Encoder";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(201, 137);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(39, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Help";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -314,15 +300,24 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(687, 16);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(39, 23);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Help";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.button6);
             this.groupBox3.Controls.Add(this.groupBox5);
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Location = new System.Drawing.Point(12, 213);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(504, 242);
+            this.groupBox3.Size = new System.Drawing.Size(504, 219);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             // 
@@ -335,16 +330,6 @@
             this.label13.Size = new System.Drawing.Size(219, 17);
             this.label13.TabIndex = 8;
             this.label13.Text = "Maximum And Minimum PWM ";
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(455, 215);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(39, 23);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "Help";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // groupBox5
             // 
@@ -532,7 +517,6 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.button12);
             this.groupBox6.Controls.Add(this.button9);
             this.groupBox6.Controls.Add(this.button10);
             this.groupBox6.Controls.Add(this.button8);
@@ -554,18 +538,9 @@
             this.groupBox6.Controls.Add(this.label16);
             this.groupBox6.Location = new System.Drawing.Point(530, 41);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(225, 293);
+            this.groupBox6.Size = new System.Drawing.Size(225, 256);
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(173, 262);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(39, 23);
-            this.button12.TabIndex = 10;
-            this.button12.Text = "Help";
-            this.button12.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
@@ -788,12 +763,11 @@
             // 
             this.groupBox7.Controls.Add(this.groupBox10);
             this.groupBox7.Controls.Add(this.label25);
-            this.groupBox7.Controls.Add(this.button13);
             this.groupBox7.Controls.Add(this.groupBox8);
             this.groupBox7.Controls.Add(this.groupBox9);
-            this.groupBox7.Location = new System.Drawing.Point(12, 461);
+            this.groupBox7.Location = new System.Drawing.Point(12, 438);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(748, 237);
+            this.groupBox7.Size = new System.Drawing.Size(748, 215);
             this.groupBox7.TabIndex = 10;
             this.groupBox7.TabStop = false;
             // 
@@ -896,15 +870,6 @@
             this.label25.TabIndex = 8;
             this.label25.Text = "Driving Modes";
             this.label25.Click += new System.EventHandler(this.label25_Click);
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(703, 209);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(39, 23);
-            this.button13.TabIndex = 7;
-            this.button13.Text = "Help";
-            this.button13.UseVisualStyleBackColor = true;
             // 
             // groupBox8
             // 
@@ -1032,7 +997,7 @@
             this.vScrollBar7.LargeChange = 1;
             this.vScrollBar7.Location = new System.Drawing.Point(131, 51);
             this.vScrollBar7.Maximum = 251;
-            this.vScrollBar7.Minimum = 50;
+            this.vScrollBar7.Minimum = -251;
             this.vScrollBar7.Name = "vScrollBar7";
             this.vScrollBar7.Size = new System.Drawing.Size(19, 129);
             this.vScrollBar7.TabIndex = 8;
@@ -1054,7 +1019,7 @@
             this.vScrollBar8.LargeChange = 1;
             this.vScrollBar8.Location = new System.Drawing.Point(9, 55);
             this.vScrollBar8.Maximum = 251;
-            this.vScrollBar8.Minimum = 50;
+            this.vScrollBar8.Minimum = -251;
             this.vScrollBar8.Name = "vScrollBar8";
             this.vScrollBar8.Size = new System.Drawing.Size(19, 125);
             this.vScrollBar8.TabIndex = 7;
@@ -1097,7 +1062,7 @@
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(12, 14);
+            this.button17.Location = new System.Drawing.Point(667, 399);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(75, 23);
             this.button17.TabIndex = 11;
@@ -1105,12 +1070,16 @@
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
+            // serialPort1
+            // 
+            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
+            // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(530, 340);
+            this.textBox13.Location = new System.Drawing.Point(530, 301);
             this.textBox13.Multiline = true;
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(224, 115);
+            this.textBox13.Size = new System.Drawing.Size(224, 92);
             this.textBox13.TabIndex = 12;
             // 
             // Form1
@@ -1118,8 +1087,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(764, 699);
+            this.ClientSize = new System.Drawing.Size(764, 652);
             this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
@@ -1128,11 +1098,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control Panel";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1198,14 +1171,12 @@
         private System.Windows.Forms.VScrollBar vScrollBar2;
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button8;
@@ -1227,7 +1198,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Button button13;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Label label26;

@@ -7,3 +7,12 @@ F:\IMR\musafir gui\Musafir Control Pannel\Control panel application 1\Control pa
 F:\IMR\musafir gui\Musafir Control Pannel\Control panel application 1\Control panel application 1\obj\Debug\Control panel application 1.csproj.GenerateResource.Cache
 F:\IMR\musafir gui\Musafir Control Pannel\Control panel application 1\Control panel application 1\obj\Debug\Control panel application 1.exe
 F:\IMR\musafir gui\Musafir Control Pannel\Control panel application 1\Control panel application 1\obj\Debug\Control panel application 1.pdb
+C:\Users\maazm\Documents\GitHub\Musafir-Desktop-Control-Panel\Musafir Control Pannel\Control panel application 1\Control panel application 1\bin\Debug\Control panel application 1.exe.config
+C:\Users\maazm\Documents\GitHub\Musafir-Desktop-Control-Panel\Musafir Control Pannel\Control panel application 1\Control panel application 1\bin\Debug\Control panel application 1.exe
+C:\Users\maazm\Documents\GitHub\Musafir-Desktop-Control-Panel\Musafir Control Pannel\Control panel application 1\Control panel application 1\bin\Debug\Control panel application 1.pdb
+C:\Users\maazm\Documents\GitHub\Musafir-Desktop-Control-Panel\Musafir Control Pannel\Control panel application 1\Control panel application 1\obj\Debug\Control_panel_application_1.Form1.resources
+C:\Users\maazm\Documents\GitHub\Musafir-Desktop-Control-Panel\Musafir Control Pannel\Control panel application 1\Control panel application 1\obj\Debug\Control_panel_application_1.Properties.Resources.resources
+C:\Users\maazm\Documents\GitHub\Musafir-Desktop-Control-Panel\Musafir Control Pannel\Control panel application 1\Control panel application 1\obj\Debug\Control panel application 1.csproj.GenerateResource.Cache
+C:\Users\maazm\Documents\GitHub\Musafir-Desktop-Control-Panel\Musafir Control Pannel\Control panel application 1\Control panel application 1\obj\Debug\Control panel application 1.exe
+C:\Users\maazm\Documents\GitHub\Musafir-Desktop-Control-Panel\Musafir Control Pannel\Control panel application 1\Control panel application 1\obj\Debug\Control panel application 1.pdb
+C:\Users\maazm\Documents\GitHub\Musafir-Desktop-Control-Panel\Musafir Control Pannel\Control panel application 1\Control panel application 1\obj\Debug\Control panel application 1.csprojResolveAssemblyReference.cache
