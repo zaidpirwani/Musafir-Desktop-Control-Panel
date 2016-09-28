@@ -913,7 +913,7 @@
             this.vScrollBar5.LargeChange = 1;
             this.vScrollBar5.Location = new System.Drawing.Point(131, 55);
             this.vScrollBar5.Maximum = 800;
-            this.vScrollBar5.Minimum = 100;
+            this.vScrollBar5.Minimum = -800;
             this.vScrollBar5.Name = "vScrollBar5";
             this.vScrollBar5.Size = new System.Drawing.Size(19, 125);
             this.vScrollBar5.TabIndex = 8;
@@ -925,7 +925,7 @@
             this.vScrollBar6.LargeChange = 1;
             this.vScrollBar6.Location = new System.Drawing.Point(9, 55);
             this.vScrollBar6.Maximum = 800;
-            this.vScrollBar6.Minimum = 100;
+            this.vScrollBar6.Minimum = -800;
             this.vScrollBar6.Name = "vScrollBar6";
             this.vScrollBar6.Size = new System.Drawing.Size(19, 125);
             this.vScrollBar6.TabIndex = 7;

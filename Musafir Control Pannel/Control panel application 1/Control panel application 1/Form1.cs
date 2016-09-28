@@ -355,23 +355,23 @@ namespace Control_panel_application_1
                 int correctKey = 0;  
                 switch (e.KeyCode) {
                     case Keys.Up:
-                        vScrollBar8.Value = 200;
-                        vScrollBar7.Value = 200;
+                        vScrollBar8.Value = 100;
+                        vScrollBar7.Value = 100;
                         correctKey = 1;
                         break;
                     case Keys.Down:
-                        vScrollBar8.Value = -200;
-                        vScrollBar7.Value = -200;
+                        vScrollBar8.Value = -100;
+                        vScrollBar7.Value = -100;
                         correctKey = 1;
                         break;
                     case Keys.Left:
-                        vScrollBar8.Value = -200;
-                        vScrollBar7.Value = 200;
+                        vScrollBar8.Value = -100;
+                        vScrollBar7.Value = 100;
                         correctKey = 1;
                         break;
                     case Keys.Right:
-                        vScrollBar8.Value = 200;
-                        vScrollBar7.Value = -200;
+                        vScrollBar8.Value = 100;
+                        vScrollBar7.Value = -100;
                         correctKey = 1;
                         break;
                 }
@@ -397,6 +397,56 @@ namespace Control_panel_application_1
                 }
             }
         }
+        /*private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (serialPort1.IsOpen)
+            {
+                int correctKey = 0;
+                switch (e.KeyCode)
+                {
+                    case Keys.Up:
+                        vScrollBar6.Value = 200;
+                        vScrollBar5.Value = 200;
+                        correctKey = 1;
+                        break;
+                    case Keys.Down:
+                        vScrollBar6.Value = -200;
+                        vScrollBar5.Value = -200;
+                        correctKey = 1;
+                        break;
+                    case Keys.Left:
+                        vScrollBar6.Value = -200;
+                        vScrollBar5.Value = 200;
+                        correctKey = 1;
+                        break;
+                    case Keys.Right:
+                        vScrollBar6.Value = 200;
+                        vScrollBar5.Value = -200;
+                        correctKey = 1;
+                        break;
+                }
+                if (correctKey == 1)
+                    button14_Click(sender, e);
+            }
+        }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (serialPort1.IsOpen)
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.Up:
+                    case Keys.Down:
+                    case Keys.Left:
+                    case Keys.Right:
+                        vScrollBar6.Value = 0;
+                        vScrollBar5.Value = 0;
+                        button14_Click(sender, e);
+                        break;
+                }
+            }
+        }*/
     }
 }
 
