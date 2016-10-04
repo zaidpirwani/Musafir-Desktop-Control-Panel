@@ -87,14 +87,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.button16 = new System.Windows.Forms.Button();
-            this.label32 = new System.Windows.Forms.Label();
-            this.vScrollBar9 = new System.Windows.Forms.VScrollBar();
-            this.vScrollBar10 = new System.Windows.Forms.VScrollBar();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -131,7 +123,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox7.SuspendLayout();
-            this.groupBox10.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.SuspendLayout();
@@ -761,104 +752,25 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.groupBox10);
             this.groupBox7.Controls.Add(this.label25);
             this.groupBox7.Controls.Add(this.groupBox8);
+            this.groupBox7.Controls.Add(this.button17);
             this.groupBox7.Controls.Add(this.groupBox9);
+            this.groupBox7.Controls.Add(this.textBox12);
             this.groupBox7.Location = new System.Drawing.Point(12, 438);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(748, 215);
             this.groupBox7.TabIndex = 10;
             this.groupBox7.TabStop = false;
             // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.button16);
-            this.groupBox10.Controls.Add(this.label32);
-            this.groupBox10.Controls.Add(this.vScrollBar9);
-            this.groupBox10.Controls.Add(this.vScrollBar10);
-            this.groupBox10.Controls.Add(this.label33);
-            this.groupBox10.Controls.Add(this.label34);
-            this.groupBox10.Controls.Add(this.textBox11);
-            this.groupBox10.Controls.Add(this.textBox12);
-            this.groupBox10.Location = new System.Drawing.Point(505, 23);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(237, 186);
-            this.groupBox10.TabIndex = 11;
-            this.groupBox10.TabStop = false;
-            // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(156, 157);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(75, 23);
-            this.button16.TabIndex = 10;
-            this.button16.Text = "Drive";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(67, 12);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(103, 17);
-            this.label32.TabIndex = 10;
-            this.label32.Text = "Manual Drive";
-            // 
-            // vScrollBar9
-            // 
-            this.vScrollBar9.Location = new System.Drawing.Point(131, 55);
-            this.vScrollBar9.Maximum = 800;
-            this.vScrollBar9.Minimum = 100;
-            this.vScrollBar9.Name = "vScrollBar9";
-            this.vScrollBar9.Size = new System.Drawing.Size(19, 125);
-            this.vScrollBar9.TabIndex = 8;
-            this.vScrollBar9.Value = 100;
-            // 
-            // vScrollBar10
-            // 
-            this.vScrollBar10.Location = new System.Drawing.Point(9, 55);
-            this.vScrollBar10.Maximum = 800;
-            this.vScrollBar10.Minimum = 100;
-            this.vScrollBar10.Name = "vScrollBar10";
-            this.vScrollBar10.Size = new System.Drawing.Size(19, 125);
-            this.vScrollBar10.TabIndex = 7;
-            this.vScrollBar10.Value = 100;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(128, 38);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(62, 13);
-            this.label33.TabIndex = 3;
-            this.label33.Text = "Right Motor";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(6, 38);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(55, 13);
-            this.label34.TabIndex = 2;
-            this.label34.Text = "Left Motor";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(153, 67);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(50, 20);
-            this.textBox11.TabIndex = 1;
-            // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(31, 67);
+            this.textBox12.Location = new System.Drawing.Point(518, 183);
             this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
             this.textBox12.Size = new System.Drawing.Size(50, 20);
             this.textBox12.TabIndex = 0;
+            this.textBox12.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.textBox12.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             // 
             // label25
             // 
@@ -1062,7 +974,7 @@
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(667, 399);
+            this.button17.Location = new System.Drawing.Point(668, 179);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(75, 23);
             this.button17.TabIndex = 11;
@@ -1076,10 +988,10 @@
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(530, 301);
+            this.textBox13.Location = new System.Drawing.Point(522, 301);
             this.textBox13.Multiline = true;
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(224, 92);
+            this.textBox13.Size = new System.Drawing.Size(238, 310);
             this.textBox13.TabIndex = 12;
             // 
             // Form1
@@ -1090,7 +1002,6 @@
             this.ClientSize = new System.Drawing.Size(764, 652);
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button17);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox3);
@@ -1098,14 +1009,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control Panel";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1126,8 +1034,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox9.ResumeLayout(false);
@@ -1216,14 +1122,6 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.VScrollBar vScrollBar9;
-        private System.Windows.Forms.VScrollBar vScrollBar10;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Button button17;
         private System.IO.Ports.SerialPort serialPort1;

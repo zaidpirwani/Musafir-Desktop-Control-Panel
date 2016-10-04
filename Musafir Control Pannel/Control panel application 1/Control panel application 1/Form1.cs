@@ -16,7 +16,8 @@ namespace Control_panel_application_1
     public partial class Form1 : Form
     {
         private bool debug = false;
-          
+        private bool pressed = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -40,7 +41,6 @@ namespace Control_panel_application_1
             button11.Enabled = false;
             button14.Enabled = false;
             button15.Enabled = false;
-            button16.Enabled = false;
             button1.Text = "Connect";
             textBox4.Text = Convert.ToString(vScrollBar1.Value);
             textBox3.Text = Convert.ToString(vScrollBar2.Value);
@@ -60,7 +60,7 @@ namespace Control_panel_application_1
         private void button2_Click(object sender, EventArgs e) //Command for send the gui  the Encoder values
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPort1.WriteLine("MOTOR,R"); //MOTOR,R
+            serialPrint("MOTOR,R"); //MOTOR,R
             if (debug)
             {
                 textBox13.Text = serialPort1.ReadLine();
@@ -70,7 +70,7 @@ namespace Control_panel_application_1
         private void button3_Click(object sender, EventArgs e)  //Will Reset Encoder
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPort1.WriteLine("MOTOR,I"); //MOTOR,I
+            serialPrint("MOTOR,I"); //MOTOR,I
             if (debug)
             {
                 textBox13.Text = serialPort1.ReadLine();
@@ -148,9 +148,9 @@ namespace Control_panel_application_1
                         button11.Enabled = true;
                         button14.Enabled = true;
                         button15.Enabled = true;
-                        button16.Enabled = true;
                         button1.Text = "Disconnect";
                         textBox13.Text = "";
+                        serialPort1.NewLine="\n";
                     }
                     else
                     {
@@ -167,7 +167,7 @@ namespace Control_panel_application_1
         private void button7_Click(object sender, EventArgs e) // sending PID parameters for left motor
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPort1.WriteLine("MOTOR,H,"+ Convert.ToString(numericUpDown1.Value) +"," + Convert.ToString(numericUpDown2.Value) + "," + Convert.ToString(numericUpDown3.Value) + ",1");  //MOTOR,H,kp,ki,kd,1/2
+            serialPrint("MOTOR,H,"+ Convert.ToString(numericUpDown1.Value) +"," + Convert.ToString(numericUpDown2.Value) + "," + Convert.ToString(numericUpDown3.Value) + ",1");  //MOTOR,H,kp,ki,kd,1/2
             if (debug)
             {
                 textBox13.Text = serialPort1.ReadLine();
@@ -177,7 +177,7 @@ namespace Control_panel_application_1
         private void button10_Click(object sender, EventArgs e)// sending PID parameters for Right motor
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPort1.WriteLine("MOTOR,H," + Convert.ToString(numericUpDown6.Value) + "," + Convert.ToString(numericUpDown5.Value) + "," + Convert.ToString(numericUpDown4.Value) + ",2");  //MOTOR,H,kp,ki,kd,1/2
+            serialPrint("MOTOR,H," + Convert.ToString(numericUpDown6.Value) + "," + Convert.ToString(numericUpDown5.Value) + "," + Convert.ToString(numericUpDown4.Value) + ",2");  //MOTOR,H,kp,ki,kd,1/2
             if (debug)
            {
                textBox13.Text = serialPort1.ReadLine();
@@ -187,7 +187,7 @@ namespace Control_panel_application_1
         private void button5_Click(object sender, EventArgs e)          // Left motor max and min speed
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPort1.WriteLine("MOTOR,M," + Convert.ToString(vScrollBar1.Value) + "," + Convert.ToString(vScrollBar2.Value) + ",1"); //MOTOR,M,Max,Min,1/2
+            serialPrint("MOTOR,M," + Convert.ToString(vScrollBar1.Value) + "," + Convert.ToString(vScrollBar2.Value) + ",1"); //MOTOR,M,Max,Min,1/2
             if (debug)
             {
                 textBox13.Text = serialPort1.ReadLine();
@@ -196,7 +196,7 @@ namespace Control_panel_application_1
         private void button11_Click(object sender, EventArgs e)         // Right motor max and min speed
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPort1.WriteLine("MOTOR,M," + Convert.ToString(vScrollBar4.Value) + "," + Convert.ToString(vScrollBar3.Value) + ",2"); //MOTOR,M,Max,Min,1/2
+            serialPrint("MOTOR,M," + Convert.ToString(vScrollBar4.Value) + "," + Convert.ToString(vScrollBar3.Value) + ",2"); //MOTOR,M,Max,Min,1/2
             if (debug)
             {
                 textBox13.Text = serialPort1.ReadLine();
@@ -224,7 +224,7 @@ namespace Control_panel_application_1
         private void button8_Click(object sender, EventArgs e)  //command for slave to send the encoder reading
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPort1.WriteLine("MOTOR,S,1"); //MOTOR,S,1/2
+            serialPrint("MOTOR,S,1"); //MOTOR,S,1/2
             if (debug)
             {
                 textBox13.Text = serialPort1.ReadLine();
@@ -234,7 +234,7 @@ namespace Control_panel_application_1
         private void button9_Click(object sender, EventArgs e)//command for slave to send the encoder reading
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPort1.WriteLine("MOTOR,S,2"); //MOTOR,S,1/2
+            serialPrint("MOTOR,S,2"); //MOTOR,S,1/2
             if (debug)
             {
                 textBox13.Text = serialPort1.ReadLine();
@@ -244,7 +244,7 @@ namespace Control_panel_application_1
         private void button15_Click(object sender, EventArgs e)  //Driving through Pwm
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPort1.WriteLine("MOTOR,L," + Convert.ToString(vScrollBar8.Value) + "," + Convert.ToString(vScrollBar7.Value)); //MOTOR,L,Left motor,Right Motor
+            serialPrint("MOTOR,L," + Convert.ToString(vScrollBar8.Value) + "," + Convert.ToString(vScrollBar7.Value)); //MOTOR,L,Left motor,Right Motor
             if (debug)
             {
                 textBox13.Text = serialPort1.ReadLine();
@@ -254,7 +254,7 @@ namespace Control_panel_application_1
         private void button14_Click(object sender, EventArgs e) //Drive through mm/s
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPort1.WriteLine("MOTOR,D," + Convert.ToString(vScrollBar6.Value) + "," + Convert.ToString(vScrollBar5.Value)); //MOTOR,D,Left motor,Right Motor
+            serialPrint("MOTOR,D," + Convert.ToString(vScrollBar6.Value) + "," + Convert.ToString(vScrollBar5.Value)); //MOTOR,D,Left motor,Right Motor
             if (debug)
             {
                 textBox13.Text = serialPort1.ReadLine();
@@ -280,9 +280,18 @@ namespace Control_panel_application_1
         {
             textBox7.Text = Convert.ToString(vScrollBar5.Value);
         }
+        private void serialPrint(String text)
+        {
+            textBox13.AppendText(">>" + text+"\n");
+            serialPort1.WriteLine(text);
+        }
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             String dataRead = serialPort1.ReadLine();
+            textBox13.Invoke(new EventHandler(delegate
+            {
+                textBox13.AppendText("--"+dataRead+"\n");
+            }));
             int a, b, c , d ;
             String s1 = "",s2 = "", s3 = "", s4 = "";
          
@@ -350,6 +359,8 @@ namespace Control_panel_application_1
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            if (pressed)
+            { return; }
             if (serialPort1.IsOpen)
             {
                 int correctKey = 0;  
@@ -378,6 +389,8 @@ namespace Control_panel_application_1
                 if (correctKey==1)
                     button15_Click(sender, e);
             }
+            pressed = true;
+
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -396,57 +409,61 @@ namespace Control_panel_application_1
                         break;
                 }
             }
-        }
-        /*private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (serialPort1.IsOpen)
-            {
-                int correctKey = 0;
-                switch (e.KeyCode)
-                {
-                    case Keys.Up:
-                        vScrollBar6.Value = 200;
-                        vScrollBar5.Value = 200;
-                        correctKey = 1;
-                        break;
-                    case Keys.Down:
-                        vScrollBar6.Value = -200;
-                        vScrollBar5.Value = -200;
-                        correctKey = 1;
-                        break;
-                    case Keys.Left:
-                        vScrollBar6.Value = -200;
-                        vScrollBar5.Value = 200;
-                        correctKey = 1;
-                        break;
-                    case Keys.Right:
-                        vScrollBar6.Value = 200;
-                        vScrollBar5.Value = -200;
-                        correctKey = 1;
-                        break;
-                }
-                if (correctKey == 1)
-                    button14_Click(sender, e);
-            }
+            pressed = false;
+
         }
 
-        private void Form1_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (serialPort1.IsOpen)
-            {
-                switch (e.KeyCode)
-                {
-                    case Keys.Up:
-                    case Keys.Down:
-                    case Keys.Left:
-                    case Keys.Right:
-                        vScrollBar6.Value = 0;
-                        vScrollBar5.Value = 0;
-                        button14_Click(sender, e);
-                        break;
-                }
-            }
-        }*/
+
+        /*private void Form1_KeyDown(object sender, KeyEventArgs e)
+{
+if (serialPort1.IsOpen)
+{
+int correctKey = 0;
+switch (e.KeyCode)
+{
+case Keys.Up:
+vScrollBar6.Value = 200;
+vScrollBar5.Value = 200;
+correctKey = 1;
+break;
+case Keys.Down:
+vScrollBar6.Value = -200;
+vScrollBar5.Value = -200;
+correctKey = 1;
+break;
+case Keys.Left:
+vScrollBar6.Value = -200;
+vScrollBar5.Value = 200;
+correctKey = 1;
+break;
+case Keys.Right:
+vScrollBar6.Value = 200;
+vScrollBar5.Value = -200;
+correctKey = 1;
+break;
+}
+if (correctKey == 1)
+button14_Click(sender, e);
+}
+}
+
+private void Form1_KeyUp(object sender, KeyEventArgs e)
+{
+if (serialPort1.IsOpen)
+{
+switch (e.KeyCode)
+{
+case Keys.Up:
+case Keys.Down:
+case Keys.Left:
+case Keys.Right:
+vScrollBar6.Value = 0;
+vScrollBar5.Value = 0;
+button14_Click(sender, e);
+break;
+}
+}
+}*/
     }
 }
 
