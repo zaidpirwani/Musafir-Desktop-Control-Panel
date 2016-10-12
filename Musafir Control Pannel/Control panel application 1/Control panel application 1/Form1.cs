@@ -352,12 +352,87 @@ namespace Control_panel_application_1
                     textBox2.Text = s2;
                 }));
             }
+            else if (dataRead.StartsWith("acc"))
+            {
+
+                a = dataRead.IndexOf(",");
+                b = dataRead.IndexOf(",", a + 1);
+                c = dataRead.IndexOf(",", b + 1);
+                s1 = dataRead.Substring(a + 1, b - a - 1);
+                s2 = dataRead.Substring(b + 1, c - b - 1);
+                s3 = dataRead.Substring(c + 1);
+                textBox11.Invoke(new EventHandler(delegate
+                {
+                    textBox11.Text = s1;
+                }));
+                textBox14.Invoke(new EventHandler(delegate
+                {
+                    textBox14.Text = s2;
+                }));
+                textBox15.Invoke(new EventHandler(delegate
+                {
+                    textBox15.Text = s3;
+                }));
+            }
+            else if (dataRead.StartsWith("gyro"))
+            {
+
+                a = dataRead.IndexOf(",");
+                b = dataRead.IndexOf(",", a + 1);
+                c = dataRead.IndexOf(",", b + 1);
+                s1 = dataRead.Substring(a + 1, b - a - 1);
+                s2 = dataRead.Substring(b + 1, c - b - 1);
+                s3 = dataRead.Substring(c + 1);
+                textBox18.Invoke(new EventHandler(delegate
+                {
+                    textBox18.Text = s1;
+                }));
+                textBox17.Invoke(new EventHandler(delegate
+                {
+                    textBox17.Text = s2;
+                }));
+                textBox16.Invoke(new EventHandler(delegate
+                {
+                    textBox16.Text = s3;
+                }));
+            }
+            else if (dataRead.StartsWith("mag"))
+            {
+
+                a = dataRead.IndexOf(",");
+                b = dataRead.IndexOf(",", a + 1);
+                c = dataRead.IndexOf(",", b + 1);
+                s1 = dataRead.Substring(a + 1, b - a - 1);
+                s2 = dataRead.Substring(b + 1, c - b - 1);
+                s3 = dataRead.Substring(c + 1);
+                textBox19.Invoke(new EventHandler(delegate
+                {
+                    textBox19.Text = s1;
+                }));
+                textBox20.Invoke(new EventHandler(delegate
+                {
+                    textBox20.Text = s2;
+                }));
+                textBox21.Invoke(new EventHandler(delegate
+                {
+                    textBox21.Text = s3;
+                }));
+            }
+            else if (dataRead.StartsWith("temp"))
+            {
+                a = dataRead.IndexOf(",");
+                s1 = dataRead.Substring(a + 1);
+                textBox22.Invoke(new EventHandler(delegate
+                {
+                    textBox22.Text = s1;
+                }));
+            }
             serialPort1.DiscardInBuffer(); //clear the RX line
 
         }
 
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        /*private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if (pressed)
             { return; }
@@ -366,23 +441,23 @@ namespace Control_panel_application_1
                 int correctKey = 0;  
                 switch (e.KeyCode) {
                     case Keys.Up:
-                        vScrollBar8.Value = 100;
-                        vScrollBar7.Value = 100;
+                        vScrollBar8.Value = 80;
+                        vScrollBar7.Value = 80;
                         correctKey = 1;
                         break;
                     case Keys.Down:
-                        vScrollBar8.Value = -100;
-                        vScrollBar7.Value = -100;
+                        vScrollBar8.Value = -80;
+                        vScrollBar7.Value = -80;
                         correctKey = 1;
                         break;
                     case Keys.Left:
-                        vScrollBar8.Value = -100;
-                        vScrollBar7.Value = 100;
+                        vScrollBar8.Value = -80;
+                        vScrollBar7.Value = 80;
                         correctKey = 1;
                         break;
                     case Keys.Right:
-                        vScrollBar8.Value = 100;
-                        vScrollBar7.Value = -100;
+                        vScrollBar8.Value = 80;
+                        vScrollBar7.Value = -80;
                         correctKey = 1;
                         break;
                 }
@@ -411,59 +486,83 @@ namespace Control_panel_application_1
             }
             pressed = false;
 
+        }*/
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (pressed)
+            { return; }
+            if (serialPort1.IsOpen)
+            {
+                int correctKey = 0;
+                switch (e.KeyCode)
+                {
+                    case Keys.Up:
+                        vScrollBar6.Value = 200;
+                        vScrollBar5.Value = 200;
+                        correctKey = 1;
+                        break;
+                    case Keys.Down:
+                        vScrollBar6.Value = -200;
+                        vScrollBar5.Value = -200;
+                        correctKey = 1;
+                        break;
+                    case Keys.Left:
+                        vScrollBar6.Value = -200;
+                        vScrollBar5.Value = 200;
+                        correctKey = 1;
+                        break;
+                    case Keys.Right:
+                        vScrollBar6.Value = 200;
+                        vScrollBar5.Value = -200;
+                        correctKey = 1;
+                        break;
+                }
+                if (correctKey == 1)
+                    button14_Click(sender, e);
+            }
+            pressed = true;
+
         }
 
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (serialPort1.IsOpen)
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.Up:
+                    case Keys.Down:
+                    case Keys.Left:
+                    case Keys.Right:
+                        vScrollBar6.Value = 0;
+                        vScrollBar5.Value = 0;
+                        button14_Click(sender, e);
+                        break;
+                }
+            }
+            pressed = false;
 
-        /*private void Form1_KeyDown(object sender, KeyEventArgs e)
-{
-if (serialPort1.IsOpen)
-{
-int correctKey = 0;
-switch (e.KeyCode)
-{
-case Keys.Up:
-vScrollBar6.Value = 200;
-vScrollBar5.Value = 200;
-correctKey = 1;
-break;
-case Keys.Down:
-vScrollBar6.Value = -200;
-vScrollBar5.Value = -200;
-correctKey = 1;
-break;
-case Keys.Left:
-vScrollBar6.Value = -200;
-vScrollBar5.Value = 200;
-correctKey = 1;
-break;
-case Keys.Right:
-vScrollBar6.Value = 200;
-vScrollBar5.Value = -200;
-correctKey = 1;
-break;
-}
-if (correctKey == 1)
-button14_Click(sender, e);
-}
-}
+        }
 
-private void Form1_KeyUp(object sender, KeyEventArgs e)
-{
-if (serialPort1.IsOpen)
-{
-switch (e.KeyCode)
-{
-case Keys.Up:
-case Keys.Down:
-case Keys.Left:
-case Keys.Right:
-vScrollBar6.Value = 0;
-vScrollBar5.Value = 0;
-button14_Click(sender, e);
-break;
-}
-}
-}*/
+        private void groupBox10_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox15_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox17_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
