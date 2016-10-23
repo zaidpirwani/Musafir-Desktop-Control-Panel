@@ -60,7 +60,7 @@ namespace Control_panel_application_1
         private void button2_Click(object sender, EventArgs e) //Command for send the gui  the Encoder values
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPrint("MOTOR,R"); //MOTOR,R
+            serialPrint("R"); //R
             if (debug)
             {
                 textBox13.Text = serialPort1.ReadLine();
@@ -70,7 +70,7 @@ namespace Control_panel_application_1
         private void button3_Click(object sender, EventArgs e)  //Will Reset Encoder
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPrint("MOTOR,I"); //MOTOR,I
+            serialPrint("I"); //I
             if (debug)
             {
                 textBox13.Text = serialPort1.ReadLine();
@@ -167,7 +167,7 @@ namespace Control_panel_application_1
         private void button7_Click(object sender, EventArgs e) // sending PID parameters for left motor
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPrint("MOTOR,H,"+ Convert.ToString(numericUpDown1.Value) +"," + Convert.ToString(numericUpDown2.Value) + "," + Convert.ToString(numericUpDown3.Value) + ",1");  //MOTOR,H,kp,ki,kd,1/2
+            serialPrint("H,"+ Convert.ToString(numericUpDown1.Value) +"," + Convert.ToString(numericUpDown2.Value) + "," + Convert.ToString(numericUpDown3.Value) + ",1");  //H,kp,ki,kd,1/2
             if (debug)
             {
                 textBox13.Text = serialPort1.ReadLine();
@@ -177,7 +177,7 @@ namespace Control_panel_application_1
         private void button10_Click(object sender, EventArgs e)// sending PID parameters for Right motor
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPrint("MOTOR,H," + Convert.ToString(numericUpDown6.Value) + "," + Convert.ToString(numericUpDown5.Value) + "," + Convert.ToString(numericUpDown4.Value) + ",2");  //MOTOR,H,kp,ki,kd,1/2
+            serialPrint("H," + Convert.ToString(numericUpDown6.Value) + "," + Convert.ToString(numericUpDown5.Value) + "," + Convert.ToString(numericUpDown4.Value) + ",2");  //H,kp,ki,kd,1/2
             if (debug)
            {
                textBox13.Text = serialPort1.ReadLine();
@@ -187,7 +187,7 @@ namespace Control_panel_application_1
         private void button5_Click(object sender, EventArgs e)          // Left motor max and min speed
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPrint("MOTOR,M," + Convert.ToString(vScrollBar1.Value) + "," + Convert.ToString(vScrollBar2.Value) + ",1"); //MOTOR,M,Max,Min,1/2
+            serialPrint("M," + Convert.ToString(vScrollBar1.Value) + "," + Convert.ToString(vScrollBar2.Value) + ",1"); //M,Max,Min,1/2
             if (debug)
             {
                 textBox13.Text = serialPort1.ReadLine();
@@ -196,7 +196,7 @@ namespace Control_panel_application_1
         private void button11_Click(object sender, EventArgs e)         // Right motor max and min speed
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPrint("MOTOR,M," + Convert.ToString(vScrollBar4.Value) + "," + Convert.ToString(vScrollBar3.Value) + ",2"); //MOTOR,M,Max,Min,1/2
+            serialPrint("M," + Convert.ToString(vScrollBar4.Value) + "," + Convert.ToString(vScrollBar3.Value) + ",2"); //M,Max,Min,1/2
             if (debug)
             {
                 textBox13.Text = serialPort1.ReadLine();
@@ -224,7 +224,7 @@ namespace Control_panel_application_1
         private void button8_Click(object sender, EventArgs e)  //command for slave to send the encoder reading
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPrint("MOTOR,S,1"); //MOTOR,S,1/2
+            serialPrint("S,1"); //S,1/2
             if (debug)
             {
                 textBox13.Text = serialPort1.ReadLine();
@@ -234,7 +234,7 @@ namespace Control_panel_application_1
         private void button9_Click(object sender, EventArgs e)//command for slave to send the encoder reading
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPrint("MOTOR,S,2"); //MOTOR,S,1/2
+            serialPrint("S,2"); //S,1/2
             if (debug)
             {
                 textBox13.Text = serialPort1.ReadLine();
@@ -244,7 +244,7 @@ namespace Control_panel_application_1
         private void button15_Click(object sender, EventArgs e)  //Driving through Pwm
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPrint("MOTOR,L," + Convert.ToString(vScrollBar8.Value) + "," + Convert.ToString(vScrollBar7.Value)); //MOTOR,L,Left motor,Right Motor
+            serialPrint("L," + Convert.ToString(vScrollBar8.Value) + "," + Convert.ToString(vScrollBar7.Value)); //L,Left Right Motor
             if (debug)
             {
                 textBox13.Text = serialPort1.ReadLine();
@@ -254,7 +254,7 @@ namespace Control_panel_application_1
         private void button14_Click(object sender, EventArgs e) //Drive through mm/s
         {
             serialPort1.DiscardOutBuffer(); //clear the TX line
-            serialPrint("MOTOR,D," + Convert.ToString(vScrollBar6.Value) + "," + Convert.ToString(vScrollBar5.Value)); //MOTOR,D,Left motor,Right Motor
+            serialPrint("D," + Convert.ToString(vScrollBar6.Value) + "," + Convert.ToString(vScrollBar5.Value)); //D,Left Right Motor
             if (debug)
             {
                 textBox13.Text = serialPort1.ReadLine();
@@ -494,31 +494,33 @@ namespace Control_panel_application_1
             if (serialPort1.IsOpen)
             {
                 int correctKey = 0;
+                int pwm = 125;
+                int offset = 15;
                 switch (e.KeyCode)
                 {
                     case Keys.Up:
-                        vScrollBar6.Value = 200;
-                        vScrollBar5.Value = 200;
+                        vScrollBar8.Value = pwm;
+                        vScrollBar7.Value = pwm - offset;
                         correctKey = 1;
                         break;
                     case Keys.Down:
-                        vScrollBar6.Value = -200;
-                        vScrollBar5.Value = -200;
+                        vScrollBar8.Value = -pwm;
+                        vScrollBar7.Value = -(pwm - offset);
                         correctKey = 1;
                         break;
                     case Keys.Left:
-                        vScrollBar6.Value = -200;
-                        vScrollBar5.Value = 200;
+                        vScrollBar8.Value = -pwm;
+                        vScrollBar7.Value = pwm - offset;
                         correctKey = 1;
                         break;
                     case Keys.Right:
-                        vScrollBar6.Value = 200;
-                        vScrollBar5.Value = -200;
+                        vScrollBar8.Value = pwm;
+                        vScrollBar7.Value = -(pwm-offset);
                         correctKey = 1;
                         break;
                 }
                 if (correctKey == 1)
-                    button14_Click(sender, e);
+                    button15_Click(sender, e);
             }
             pressed = true;
 
@@ -534,9 +536,9 @@ namespace Control_panel_application_1
                     case Keys.Down:
                     case Keys.Left:
                     case Keys.Right:
-                        vScrollBar6.Value = 0;
-                        vScrollBar5.Value = 0;
-                        button14_Click(sender, e);
+                        vScrollBar8.Value = 0;
+                        vScrollBar7.Value = 0;
+                        button15_Click(sender, e);
                         break;
                 }
             }

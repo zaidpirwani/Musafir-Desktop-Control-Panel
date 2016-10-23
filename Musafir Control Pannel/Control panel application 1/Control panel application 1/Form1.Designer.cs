@@ -111,26 +111,26 @@
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox22 = new System.Windows.Forms.TextBox();
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -838,24 +838,22 @@
             // 
             this.vScrollBar5.LargeChange = 1;
             this.vScrollBar5.Location = new System.Drawing.Point(131, 55);
-            this.vScrollBar5.Maximum = 800;
-            this.vScrollBar5.Minimum = -800;
+            this.vScrollBar5.Minimum = -100;
             this.vScrollBar5.Name = "vScrollBar5";
             this.vScrollBar5.Size = new System.Drawing.Size(19, 125);
             this.vScrollBar5.TabIndex = 8;
-            this.vScrollBar5.Value = 100;
+            this.vScrollBar5.Value = 20;
             this.vScrollBar5.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vScrollBar5_Scroll);
             // 
             // vScrollBar6
             // 
             this.vScrollBar6.LargeChange = 1;
             this.vScrollBar6.Location = new System.Drawing.Point(9, 55);
-            this.vScrollBar6.Maximum = 800;
-            this.vScrollBar6.Minimum = -800;
+            this.vScrollBar6.Minimum = -100;
             this.vScrollBar6.Name = "vScrollBar6";
             this.vScrollBar6.Size = new System.Drawing.Size(19, 125);
             this.vScrollBar6.TabIndex = 7;
-            this.vScrollBar6.Value = 100;
+            this.vScrollBar6.Value = 20;
             this.vScrollBar6.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vScrollBar6_Scroll);
             // 
             // label27
@@ -932,8 +930,8 @@
             // 
             this.vScrollBar7.LargeChange = 1;
             this.vScrollBar7.Location = new System.Drawing.Point(131, 51);
-            this.vScrollBar7.Maximum = 251;
-            this.vScrollBar7.Minimum = -251;
+            this.vScrollBar7.Maximum = 200;
+            this.vScrollBar7.Minimum = -200;
             this.vScrollBar7.Name = "vScrollBar7";
             this.vScrollBar7.Size = new System.Drawing.Size(19, 129);
             this.vScrollBar7.TabIndex = 8;
@@ -954,8 +952,8 @@
             // 
             this.vScrollBar8.LargeChange = 1;
             this.vScrollBar8.Location = new System.Drawing.Point(9, 55);
-            this.vScrollBar8.Maximum = 251;
-            this.vScrollBar8.Minimum = -251;
+            this.vScrollBar8.Maximum = 200;
+            this.vScrollBar8.Minimum = -200;
             this.vScrollBar8.Name = "vScrollBar8";
             this.vScrollBar8.Size = new System.Drawing.Size(19, 125);
             this.vScrollBar8.TabIndex = 7;
@@ -1047,119 +1045,13 @@
             this.groupBox10.Text = "IMU ONLINE";
             this.groupBox10.Enter += new System.EventHandler(this.groupBox10_Enter);
             // 
-            // label10
+            // textBox22
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(23, 12);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(18, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "ax";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(23, 51);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(18, 13);
-            this.label32.TabIndex = 1;
-            this.label32.Text = "gx";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(3, 132);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(67, 13);
-            this.label34.TabIndex = 3;
-            this.label34.Text = "Temperature";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(6, 28);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(54, 20);
-            this.textBox11.TabIndex = 4;
-            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(146, 12);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(18, 13);
-            this.label35.TabIndex = 5;
-            this.label35.Text = "az";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(80, 12);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(18, 13);
-            this.label36.TabIndex = 6;
-            this.label36.Text = "ay";
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(66, 28);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(54, 20);
-            this.textBox14.TabIndex = 7;
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(126, 28);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(54, 20);
-            this.textBox15.TabIndex = 8;
-            this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(146, 51);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(18, 13);
-            this.label37.TabIndex = 9;
-            this.label37.Text = "gz";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(80, 51);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(18, 13);
-            this.label38.TabIndex = 10;
-            this.label38.Text = "gy";
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(126, 66);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.ReadOnly = true;
-            this.textBox16.Size = new System.Drawing.Size(54, 20);
-            this.textBox16.TabIndex = 11;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(66, 67);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.ReadOnly = true;
-            this.textBox17.Size = new System.Drawing.Size(54, 20);
-            this.textBox17.TabIndex = 12;
-            this.textBox17.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(6, 66);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(54, 20);
-            this.textBox18.TabIndex = 13;
+            this.textBox22.Location = new System.Drawing.Point(66, 129);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.ReadOnly = true;
+            this.textBox22.Size = new System.Drawing.Size(54, 20);
+            this.textBox22.TabIndex = 20;
             // 
             // textBox19
             // 
@@ -1203,6 +1095,15 @@
             this.label40.TabIndex = 15;
             this.label40.Text = "mz";
             // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(3, 132);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(67, 13);
+            this.label34.TabIndex = 3;
+            this.label34.Text = "Temperature";
+            // 
             // label41
             // 
             this.label41.AutoSize = true;
@@ -1212,13 +1113,110 @@
             this.label41.TabIndex = 14;
             this.label41.Text = "mx";
             // 
-            // textBox22
+            // textBox18
             // 
-            this.textBox22.Location = new System.Drawing.Point(66, 129);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.ReadOnly = true;
-            this.textBox22.Size = new System.Drawing.Size(54, 20);
-            this.textBox22.TabIndex = 20;
+            this.textBox18.Location = new System.Drawing.Point(6, 66);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.ReadOnly = true;
+            this.textBox18.Size = new System.Drawing.Size(54, 20);
+            this.textBox18.TabIndex = 13;
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(66, 67);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.ReadOnly = true;
+            this.textBox17.Size = new System.Drawing.Size(54, 20);
+            this.textBox17.TabIndex = 12;
+            this.textBox17.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(126, 66);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.ReadOnly = true;
+            this.textBox16.Size = new System.Drawing.Size(54, 20);
+            this.textBox16.TabIndex = 11;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(80, 51);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(18, 13);
+            this.label38.TabIndex = 10;
+            this.label38.Text = "gy";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(146, 51);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(18, 13);
+            this.label37.TabIndex = 9;
+            this.label37.Text = "gz";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(126, 28);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.ReadOnly = true;
+            this.textBox15.Size = new System.Drawing.Size(54, 20);
+            this.textBox15.TabIndex = 8;
+            this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(66, 28);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.ReadOnly = true;
+            this.textBox14.Size = new System.Drawing.Size(54, 20);
+            this.textBox14.TabIndex = 7;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(80, 12);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(18, 13);
+            this.label36.TabIndex = 6;
+            this.label36.Text = "ay";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(146, 12);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(18, 13);
+            this.label35.TabIndex = 5;
+            this.label35.Text = "az";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(6, 28);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
+            this.textBox11.Size = new System.Drawing.Size(54, 20);
+            this.textBox11.TabIndex = 4;
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(23, 51);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(18, 13);
+            this.label32.TabIndex = 1;
+            this.label32.Text = "gx";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(23, 12);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(18, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "ax";
             // 
             // Form1
             // 
